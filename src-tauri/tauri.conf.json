@@ -61,7 +61,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.lencx.chatgpt",
+      "identifier": "com.chris.chatgpt",
       "longDescription": "ChatGPT Desktop Application",
       "macOS": {
         "entitlements": null,
