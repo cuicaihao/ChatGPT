@@ -1,9 +1,9 @@
 cask "chatgpt" do
-  version "0.11.0"
+  version "1.0.0"
   arch = Hardware::CPU.arch.to_s
   sha256s = {
-    "x86_64" => "5f8013bee34daa53be8612b751955f745e7af9ef85b3541eba304b45176b6d8a",
-    "aarch64" => "a5d914277d16827c5e3c641abd80c7978f78b8ccf36bf08661e1bc06efc6224e"
+    "x86_64" => "474c6024ac1100512c242449da8d93b521334d0d03a9457c42446293a64eaff4",
+    "aarch64" => "998d15813194957de140a530605252fdf3f68fafdba1353706fa00d070c7c23d"
   }
   if arch == "arm64" then arch = "aarch64" end
   url "https://github.com/lencx/ChatGPT/releases/download/v#{version}/ChatGPT_#{version}_macos_#{arch}.dmg"

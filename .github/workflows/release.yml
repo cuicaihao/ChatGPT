@@ -20,7 +20,7 @@ jobs:
             os: macos-latest
             arch: x86_64
             target: x86_64-apple-darwin
-          - buid: macos
+          - build: macos
             os: macos-latest
             arch: aarch64
             target: aarch64-apple-darwin
@@ -53,10 +53,6 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           key: ${{ matrix.target }}
-
-      - name: Install xattr (macos only)
-        if: matrix.os == 'macos-latest'
-        run: pip install xattr
 
       - name: Install dependencies (ubuntu only)
         if: matrix.os == 'ubuntu-latest'
@@ -109,11 +105,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install xattr
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xattr
 
       - name: Query version number
         run: echo "version=${GITHUB_REF:11}" >> $GITHUB_ENV
